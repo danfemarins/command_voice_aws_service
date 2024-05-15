@@ -53,6 +53,9 @@ def process_command(command):
         speak("Comando não reconhecido.")
 
 def main():
+    intro_text = "Olá! Meu Nome e Astrid , seu chat virtual por voz. Estou aqui para ajudá-lo com informações sobre o servidor ECS. Você pode me fazer uma pergunta sobre o número de tarefas ou o status do servidor ECS. Por favor, fale 'tarefas' para obter o número de tarefas ou 'status' para verificar o status do servidor."
+    print(intro_text)
+    speak(intro_text)  # Introdução falada
     while True:
         command = listen_command()
         if command:
@@ -61,3 +64,4 @@ def main():
 if __name__ == "__main__":
     print("Iniciando o bot...")
     main()
+
